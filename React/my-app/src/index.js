@@ -11,11 +11,27 @@ const Header = () => {
 
 }
 const Field = () => {
-    return <input type="text" placeholder='Type here'/>
+    const placeText = 'Enter here,please'
+    const styleField = {
+        width:'300px'
+    }
+    return <input 
+                style={styleField}
+                type="text"
+                placeholder={placeText}
+                autoComplete=''
+                className='first'
+                htmlFor= ""/>
 }
 
-const Btn = () => {
-    return <button/>
+const Btn = () => { 
+    const logged = true;
+    const text = "Log in";
+
+    // const res = () =>{v 
+    //     return "Sign in";
+    // }
+    return <button>{logged ?  "Enter" :text}</button>
 }
 const App = () => {
     return (
