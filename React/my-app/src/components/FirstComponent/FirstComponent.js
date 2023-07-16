@@ -1,5 +1,6 @@
 import React ,{Component} from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./FirstComponent.css"
 import { Button, Container, Row, Col } from "reactstrap";
 
 export default class FirstComponent extends Component{
@@ -44,16 +45,14 @@ export default class FirstComponent extends Component{
               <Col className="bg-light border">
                 <h1> Name {name}</h1>
               </Col>
-              <Col className="bg-light border">
-                <h2> {count}</h2>
-              </Col>
-            </Row>
-            <Row>
-              <Col className="bg-light border">
-                <Button color="primary" size="sm" onClick={this.handler}>
+              <Button color="primary" size="sm" onClick={this.handler}>
                   Change name
                 </Button>
-              </Col>
+            </Row>
+            <Row>
+                <h2> {count} </h2>
+            </Row>
+            <Row>
               <Col className="bg-light border">
                 <Button color="primary" size="sm" onClick={this.plus}>
                   Plus
