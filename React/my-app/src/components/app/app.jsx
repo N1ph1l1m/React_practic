@@ -1,5 +1,6 @@
 import React from "react";
 import FirstComponent from "../FirstComponent/FirstComponent";
+import SecondComponent  from "../SecondComponent/secondComponent"
 import {Container} from "reactstrap";
 import styled from "styled-components";
 
@@ -17,6 +18,7 @@ const ToggleOff = styled.div`
   background-color:red;
   border:1px solid black;
   border-radius:50px;
+  margin-bottom:30px;
 `
 
 function formatName(user){
@@ -97,14 +99,13 @@ export default class App extends React.Component {
         </div>
       </Container>  
       <Container>
-        <button onClick={this.handleClick}>{this.state.isToggleOn ? 'On' : 'Off'}    {togleBG}</button>
+        <button onClick={this.handleClick}>{this.state.isToggleOn ? 'On' : 'Off'}{togleBG}</button>
       </Container>
+      <br/>
       <Container>
-      
+        <SecondComponent/>
       </Container>
       </>
-      
-
     )
   }
 }
