@@ -1,6 +1,7 @@
 import React from "react";
 import FirstComponent from "../FirstComponent/FirstComponent";
 import SecondComponent from "../SecondComponent/secondComponent";
+import FormsComponent from "../FormsComponent";
 import { Container } from "reactstrap";
 import styled from "styled-components";
 
@@ -107,6 +108,9 @@ export default class App extends React.Component {
         <Container>
           <button onClick={this.showLiClick}>Show Li component</button>
           {showLi}
+        </Container>
+        <Container>
+        <FormsComponent/>
         </Container>
       </>
     );
