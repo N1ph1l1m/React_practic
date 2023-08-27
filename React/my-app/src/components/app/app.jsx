@@ -2,6 +2,7 @@ import React from "react";
 import FirstComponent from "../FirstComponent/FirstComponent";
 import SecondComponent from "../SecondComponent/secondComponent";
 import FormsComponent from "../FormsComponent";
+import Calculator from "../Calculator";
 import { Container } from "reactstrap";
 import styled from "styled-components";
 
@@ -111,6 +112,10 @@ export default class App extends React.Component {
         </Container>
         <Container>
         <FormsComponent/>
+        </Container>
+        <Container>
+        <br/>
+        <Calculator/>
         </Container>
       </>
     );
