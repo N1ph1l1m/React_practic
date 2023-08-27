@@ -38,10 +38,12 @@ export default class App extends React.Component {
       date: new Date(),
       isToggleOn: true,
       showLi: false,
+      showForm: false,
     };
     // this.state = {isToggleOn:true};
     this.handleClick = this.handleClick.bind(this);
     this.showLiClick = this.showLiClick.bind(this);
+    this.showClickForm = this.showClickForm.bind(this);
   }
 
   componentDidMount() {
@@ -67,6 +69,11 @@ export default class App extends React.Component {
       showLi: !prevState.showLi,
     }));
   }
+  showClickForm() {
+    this.setState((prevState) => ({
+      showForm: !prevState.showForm,
+    }));
+  }
 
   togleBG = () => {
     if (this.state.isToggleOn === true) return <ToggleOn />;
@@ -80,13 +87,23 @@ export default class App extends React.Component {
       return <SecondComponent />;
     } else {
       console.log("false");
-      return <h1>No component </h1>;
+      return <p>No component </p>;
+    }
+  };
+  showFormRender = () => {
+    if (this.state.showForm === true) {
+      console.log("true");
+      return <FormsComponent/>;
+    } else {
+      console.log("false");
+      return <p>No component </p>;
     }
   };
 
   render() {
     const togleBG = this.togleBG();
     const showLi = this.showLiRender();
+    const showForm = this.showFormRender();
     return (
       <>
         <Container>
@@ -107,11 +124,12 @@ export default class App extends React.Component {
         </Container>
         <br />
         <Container>
-          <button onClick={this.showLiClick}>Show Li component</button>
+          <button onClick={this.showLiClick}>Show second component</button>
           {showLi}
         </Container>
         <Container>
-        <FormsComponent/>
+          <button onClick={this.showClickForm}>Show Form component </button>
+          {showForm}
         </Container>
         <Container>
         <br/>
