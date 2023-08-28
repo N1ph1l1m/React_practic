@@ -9,6 +9,7 @@ import ErrorPage from './components/Router/errorPage';
 import FormsComponent from './components/FormsComponent';
 import App from './components/app/app';
 import Root from './components/Router/root';
+import SecondComponent from './components/SecondComponent/secondComponent';
 
 const router  = createBrowserRouter([
     {
@@ -19,6 +20,10 @@ const router  = createBrowserRouter([
         {
             path:"/home",
             element:<App/>
+        },
+        {
+            path:"/second",
+            element:<SecondComponent/>
         },
         {
             path:"/form",

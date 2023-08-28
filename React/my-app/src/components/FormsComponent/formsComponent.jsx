@@ -1,5 +1,17 @@
 import React from "react";
-import { Container,Row,Col} from "reactstrap";
+import styled from "styled-components";
+
+
+
+const FormWrap = styled.div`
+  width: 500px;
+  height: 500px;
+  border: 1px solid black;
+  margin:0px auto;
+  display:flex;
+  flex-direction:column;
+  alighn-item:center;
+`;
 
 export default class FormsComponent extends React.Component{
     constructor(props){
@@ -51,7 +63,6 @@ export default class FormsComponent extends React.Component{
         });
      }
 
-
      clearForm(){
         this.setState((clearState)=>({
             valueAr : clearState = "",
@@ -64,7 +75,7 @@ export default class FormsComponent extends React.Component{
                 <h1>Component Forms</h1>
                     <form onSubmit={this.handleSubmitForm}>
                         <label>
-                            Name:<br/>
+                            Name:
                             <input type="text" value={this.state.value} onChange={this.handleChangeForm}/>
                         </label>
                         <input type="submit" value="Send"/>
@@ -77,8 +88,8 @@ export default class FormsComponent extends React.Component{
             <>
                 <form onSubmit={this.handleSubmitArea}>
                     <label>
-                        Messeng:<br/>
-                        <textarea value={this.state.valueAr} onChange={this.handleChangeArea} onClick={this.clearForm}/>
+                        Messeng:
+                         <textarea value={this.state.valueAr} onChange={this.handleChangeArea} onClick={this.clearForm}/>
                     </label>
                     <input type="submit" value="Send messange"/>
                 </form>
@@ -127,24 +138,24 @@ export default class FormsComponent extends React.Component{
         )
      }
 
-    render(){
+
+
+    render(){     
         const form  = this.Form();
         const formArea = this.TextArea();
         const selectFruit = this.Select();
         const componentInput = this.componentInput();
         return(
-            <Container>
-            <Row>
-            <Col className="bg-light border">
+            
+            <FormWrap>
                 {form}
                 {formArea}
                 {selectFruit}
-            </Col>
-            <Col className="bg-light border">
-            {componentInput}
-            </Col>
-            </Row>
-            </Container>
+                {componentInput}
+            </FormWrap>
+            
+            
+                
         )
     }
 }

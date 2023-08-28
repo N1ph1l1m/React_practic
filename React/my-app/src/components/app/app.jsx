@@ -44,8 +44,6 @@ export default class App extends React.Component {
     };
     // this.state = {isToggleOn:true};
     this.handleClick = this.handleClick.bind(this);
-    this.showLiClick = this.showLiClick.bind(this);
-    this.showClickForm = this.showClickForm.bind(this);
   }
 
   componentDidMount() {
@@ -66,46 +64,17 @@ export default class App extends React.Component {
       isToggleOn: !prevState.isToggleOn,
     }));
   }
-  showLiClick() {
-    this.setState((prevState) => ({
-      showLi: !prevState.showLi,
-    }));
-  }
-  showClickForm() {
-    this.setState((prevState) => ({
-      showForm: !prevState.showForm,
-    }));
-  }
-
+  
   togleBG = () => {
     if (this.state.isToggleOn === true) return <ToggleOn />;
     else {
       return <ToggleOff />;
     }
   };
-  showLiRender = () => {
-    if (this.state.showLi === true) {
-      console.log("true");
-      return <SecondComponent />;
-    } else {
-      console.log("false");
-      return <p>No component </p>;
-    }
-  };
-  showFormRender = () => {
-    if (this.state.showForm === true) {
-      console.log("true");
-      return <FormsComponent/>;
-    } else {
-      console.log("false");
-      return <p>No component </p>;
-    }
-  };
 
-  render() {
+    render() {
     const togleBG = this.togleBG();
-    const showLi = this.showLiRender();
-    const showForm = this.showFormRender();
+    
     return (
       <>
         <Container>
@@ -124,15 +93,7 @@ export default class App extends React.Component {
             {togleBG}
           </button>
         </Container>
-        <br />
-        <Container>
-          <button onClick={this.showLiClick}>Show second component</button>
-          {showLi}
-        </Container>
-        <Container>
-          <button onClick={this.showClickForm}>Show Form component </button>
-          {showForm}
-        </Container>
+     
         <Container>
         <br/>
         <Calculator/>

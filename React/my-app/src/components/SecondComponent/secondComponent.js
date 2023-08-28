@@ -45,38 +45,76 @@ function NumListValue(props) {
 }
 
 export default class SecondComponent extends React.Component {
+    constructor(props){
+        super(props);
+        this.state ={
+            show: false,
+        }
+        this.showComponent = this.showComponent.bind(this);
+    
+        
+    }
+    showComponent(){
+        this.setState((prevState) =>({
+            show: !prevState.show,
+        }));
+    }
+    renderComponent(){
+        if(this.state.show === true){
+            return(
+              <this.secondCmp/>
+            
+            );
+        }
+    } 
+    
+    secondCmp(){
+        return(
+            <Container>
+            <Row>
+              <Col className="bg-light border">
+                <ul>
+                  <li>{listItem}</li>
+                </ul>
+              </Col>
+    
+              <Col className="bg-light border">
+                <NumberLIstItem num={number} />
+              </Col>
+            </Row>
+            <Row>
+              <Col className="bg-light border">
+                <h1>Li with Key</h1>
+                <NumberListItemKey numK={number} />
+              </Col>
+    
+              <Col className="bg-light border">
+                <h1>Li with Index</h1>
+                <NumberListItemIndex numIndex={number} />
+              </Col>
+            </Row>
+            <Row>
+              <Col className="bg-light border">
+                <span>fff</span>
+                <NumListValue number={number} />
+              </Col>
+            </Row>
+          </Container>
+        )
+    }
   render() {
+    const component = this.renderComponent()
     return (
-      <Container>
+     <>
+        <Container>
         <Row>
-          <Col className="bg-light border">
-            <ul>
-              <li>{listItem}</li>
-            </ul>
-          </Col>
-
-          <Col className="bg-light border">
-            <NumberLIstItem num={number} />
-          </Col>
+        <button onClick={this.showComponent}>Show second component</button>
         </Row>
-        <Row>
-          <Col className="bg-light border">
-            <h1>Li with Key</h1>
-            <NumberListItemKey numK={number} />
-          </Col>
-
-          <Col className="bg-light border">
-            <h1>Li with Index</h1>
-            <NumberListItemIndex numIndex={number} />
-          </Col>
-        </Row>
-        <Row>
-          <Col className="bg-light border">
-            <span>fff</span>
-            <NumListValue number={number} />
-          </Col>
-        </Row>
-      </Container>
+        
+        </Container>
+        
+        {component}
+     </>
     );
   }
 }

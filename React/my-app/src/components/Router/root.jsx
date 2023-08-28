@@ -16,6 +16,13 @@ export default function Root(){
           </NavItem>
           <NavItem>
             <NavLink>
+            <Link to={"/second"}>
+            Second Component
+            </Link>
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink>
             <Link to={"/form"}>
             Forms component
             </Link>
