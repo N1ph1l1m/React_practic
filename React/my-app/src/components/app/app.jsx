@@ -1,11 +1,12 @@
 import React from "react";
-import Root from "../Router";
 import FirstComponent from "../FirstComponent/FirstComponent";
 import SecondComponent from "../SecondComponent/secondComponent";
 import FormsComponent from "../FormsComponent";
 import Calculator from "../Calculator";
 import { Container } from "reactstrap";
 import styled from "styled-components";
+
+
 
 const ToggleOn = styled.div`
   width: 20px;
@@ -107,7 +108,6 @@ export default class App extends React.Component {
     const showForm = this.showFormRender();
     return (
       <>
-      <Root/>
         <Container>
           <FirstComponent />
         </Container>
@@ -137,6 +137,7 @@ export default class App extends React.Component {
         <br/>
         <Calculator/>
         </Container>
+   
       </>
     );
   }

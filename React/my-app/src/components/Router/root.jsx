@@ -1,34 +1,36 @@
 import React from "react";
-import { Nav,NavItem,NavLink } from "reactstrap";
+import { Outlet,Link } from "react-router-dom";
+import { Nav, NavItem, NavLink } from "reactstrap";
 
-export default class Root extends React.Component{
-    render() {
-        return (
-            <>
-        <Nav
-  justified
-  tabs
->
-  <NavItem>
-    <NavLink
-      active
-      href="#">
-      Link
-    </NavLink>
-  </NavItem>
-  <NavItem>
-    <NavLink href="#">
-      Another Link
-    </NavLink>
-  </NavItem>
-  <NavItem>
-    <NavLink href="#">
-      Disabled Link
-    </NavLink>
-  </NavItem>
-</Nav>
-    </>
-        );
-    }
-  
+
+export default function Root(){
+    return (
+        <>
+            <Nav justified tabs>
+          <NavItem>
+            <NavLink active>
+            <Link to={"/home"}>
+                Home
+            </Link>
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink>
+            <Link to={"/form"}>
+            Forms component
+            </Link>
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink>
+            <Link to={"/"}>
+            Disabled Link
+            </Link></NavLink>
+          </NavItem>
+        </Nav>
+        <div id="detail">
+            <Outlet />
+        </div>
+        </>
+    );
 }
