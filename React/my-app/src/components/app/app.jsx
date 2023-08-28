@@ -1,8 +1,5 @@
 import React from "react";
 import FirstComponent from "../FirstComponent/FirstComponent";
-import SecondComponent from "../SecondComponent/secondComponent";
-import FormsComponent from "../FormsComponent";
-import Calculator from "../Calculator";
 import { Container } from "reactstrap";
 import styled from "styled-components";
 
@@ -92,13 +89,7 @@ export default class App extends React.Component {
             {this.state.isToggleOn ? "On" : "Off"}
             {togleBG}
           </button>
-        </Container>
-     
-        <Container>
-        <br/>
-        <Calculator/>
-        </Container>
-   
+        </Container> 
       </>
     );
   }

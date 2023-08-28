@@ -9,6 +9,7 @@ import ErrorPage from './components/Router/errorPage';
 import FormsComponent from './components/FormsComponent';
 import App from './components/app/app';
 import Root from './components/Router/root';
+import Calculator from './components/Calculator';
 import SecondComponent from './components/SecondComponent/secondComponent';
 
 const router  = createBrowserRouter([
@@ -29,6 +30,10 @@ const router  = createBrowserRouter([
             path:"/form",
             element:<FormsComponent/>
         },
+        {
+            path:"/temp",
+            element:<Calculator/>
+        },
       ]
     },
 
@@ -39,11 +44,7 @@ const router  = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 <React.StrictMode>
-
-    <RouterProvider router={router}>
-    <Root/>
-    </RouterProvider>
-
+    <RouterProvider router={router}/>
 </React.StrictMode>
 );
 
