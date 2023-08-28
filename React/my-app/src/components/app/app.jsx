@@ -1,4 +1,5 @@
 import React from "react";
+import Root from "../Router";
 import FirstComponent from "../FirstComponent/FirstComponent";
 import SecondComponent from "../SecondComponent/secondComponent";
 import FormsComponent from "../FormsComponent";
@@ -106,6 +107,7 @@ export default class App extends React.Component {
     const showForm = this.showFormRender();
     return (
       <>
+      <Root/>
         <Container>
           <FirstComponent />
         </Container>

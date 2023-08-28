@@ -135,20 +135,15 @@ export default class FormsComponent extends React.Component{
         return(
             <Container>
             <Row>
-            <Col>
+            <Col className="bg-light border">
                 {form}
                 {formArea}
                 {selectFruit}
             </Col>
-            <Col>
+            <Col className="bg-light border">
             {componentInput}
             </Col>
             </Row>
-            
-           
-            <Container>
-            
-            </Container>
             </Container>
         )
     }

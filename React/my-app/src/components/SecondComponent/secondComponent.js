@@ -59,27 +59,23 @@ export default class SecondComponent extends React.Component {
             <NumberLIstItem num={number} />
           </Col>
         </Row>
-        <Container>
-          <Row>
-            <Col>
+        <Row>
+            <Col className="bg-light border">
               <h1>Li with Key</h1>
               <NumberListItemKey numK={number} />
             </Col>
 
-            <Col>
+            <Col className="bg-light border">
               <h1>Li with Index</h1>
               <NumberListItemIndex numIndex={number} />
             </Col>
           </Row>
-        </Container>
-        <Container>
           <Row>
-            <Col>
+            <Col className="bg-light border">
               <span>fff</span>
               <NumListValue number={number} />
             </Col>
           </Row>
-        </Container>
       </Container>
     );
   }
