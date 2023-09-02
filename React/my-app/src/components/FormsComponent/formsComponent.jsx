@@ -4,14 +4,52 @@ import styled from "styled-components";
 
 
 const FormWrap = styled.div`
-  width: 500px;
-  height: 500px;
-  border: 1px solid black;
-  margin:0px auto;
-  display:flex;
-  flex-direction:column;
-  alighn-item:center;
+        width: 500px;
+        height: 500px;
+        border: 1px solid black;
+        margin:0px auto;
+        display:flex;
+        flex-direction:column;
+        alighn-item:center;
 `;
+const FormItem = styled.div`
+        width:480px;
+        min-height:50px;
+        margin:10px;
+`
+const InputItem = styled.input`
+        border:1px solid gray;
+        width:200px;
+        height:30px;
+        border-radius:20px;
+        margin-left:3px;
+        padding-left:13px;
+`
+const InputSendButton = styled.input`
+        min-width:70px;
+        height:30px;
+        margin-left:6px;
+        border-radius:20px;
+        border:1px solid gray;
+`
+const TextAreaNew = styled.textarea`
+        width:210px;
+        height:80px;
+        border-radius:20px;
+        margin-left:10px;
+        padding:8px;
+        align-self: center;
+`
+const FormLabel = styled.label`
+        margin-right:5px;
+`
+const FormWrapItem = styled.div`
+        position:relative;
+        display:flex;
+        justify-content: center;
+        width:480px;
+        min-height:30px;
+`
 
 export default class FormsComponent extends React.Component{
     constructor(props){
@@ -71,69 +109,72 @@ export default class FormsComponent extends React.Component{
 
      Form(){
         return(
-            <>
-                <h1>Component Forms</h1>
+                <FormItem>
+                    <h1>Component Forms</h1>
                     <form onSubmit={this.handleSubmitForm}>
-                        <label>
-                            Name:
-                            <input type="text" value={this.state.value} onChange={this.handleChangeForm}/>
-                        </label>
-                        <input type="submit" value="Send"/>
+                    <FormWrapItem>
+                        <FormLabel>Name:</FormLabel>
+                        <InputItem type="text" value={this.state.value} onChange={this.handleChangeForm}/>
+                        <InputSendButton type="submit" value="Send"/>
+                    </FormWrapItem>
                     </form>
-            </>
+                </FormItem>
         )
      }
      TextArea(){
         return(
-            <>
-                <form onSubmit={this.handleSubmitArea}>
-                    <label>
-                        Messeng:
-                         <textarea value={this.state.valueAr} onChange={this.handleChangeArea} onClick={this.clearForm}/>
-                    </label>
-                    <input type="submit" value="Send messange"/>
-                </form>
-            </>
+                <FormItem>
+                    <form onSubmit={this.handleSubmitArea}>
+                    <FormWrapItem>
+                        <FormLabel>Messeng:</FormLabel>
+                        <TextAreaNew value={this.state.valueAr} onChange={this.handleChangeArea} onClick={this.clearForm}/>
+                        <InputSendButton type="submit" value="Send messange"/>
+                    </FormWrapItem>
+                    </form>
+                </FormItem>
         )
      }
      Select(){
         return(
-            <>
+            <FormItem>
                 <form onSubmit={this.handleSubmitSelect}>
-                    <label>
-                    Выберите ваш любимый вкус:
+                <FormWrapItem>
+                <FormLabel>Выберите ваш любимый вкус:</FormLabel>
                     <select value={this.state.valueSelect} onChange={this.handleChangeSelect}>
                         <option value="grapefruit">Grapefruit</option>
                         <option value="lime">Lime</option>
                         <option value="coconut">Coconut</option>
                         <option value="mango">Mango</option>
                     </select>
-                    </label>
-                    <input type="submit" value="Send" />
+                    <InputSendButton type="submit" value="Send" />
+                </FormWrapItem>
                 </form>
-            </>
+            </FormItem>
         )
      }
      componentInput(){
         return(
             <form>
-            <label>
+            <FormWrapItem>
+            <FormLabel>
               Пойдут:
               <input
                 name="isGoing"
                 type="checkbox"
                 checked={this.state.isGoing}
                 onChange={this.handleInputChange} />
-            </label>
-            <br />
-            <label>
+            </FormLabel>
+            <FormLabel>
               Количество гостей:
-              <input
+              <InputItem
                 name="numberOfGuests"
                 type="number"
                 value={this.state.numberOfGuests}
                 onChange={this.handleInputChange} />
-            </label>
+            </FormLabel>
+            </FormWrapItem>
+       
+            
           </form>
         )
      }

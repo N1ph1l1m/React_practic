@@ -4,11 +4,11 @@ import styled from "styled-components";
 
 
 const TempWrap = styled.div`
-  width: 700px;
-  height: 120px;
-  border: 1px solid black;
-  border-radius:8px;
-  margin-right:18px;
+        width: 700px;
+        height: 120px;
+        border: 1px solid black;
+        border-radius:8px;
+        margin-right:18px;
 `;
 const InputItem = styled.input`
         border:1px solid gray;
@@ -20,9 +20,9 @@ const InputItem = styled.input`
         padding-left:13px;
 `
 const H1New = styled.h1`
-margin-top:8px;
-font-size:19px;
-color:blue;
+        margin-top:8px;
+        font-size:19px;
+        color:blue;
 `
 
 const scaleItem = {
@@ -48,8 +48,7 @@ export default class TemperatureInput extends React.Component{
             <H1New>Введите температуру в градусах {scaleItem[scale]}:</H1New>
         
             <InputItem value={temperature}
-                    onChange = {this.handleChangeTemp}/>
-           
+                       onChange = {this.handleChangeTemp}/>
             </TempWrap>
       
         );
