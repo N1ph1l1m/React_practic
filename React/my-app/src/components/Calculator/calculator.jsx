@@ -6,13 +6,13 @@ import styled from "styled-components";
 
 
 const CalculatorWrap = styled.div`
-  width: 600px;
+  width: 700px;
   min-height: 200px;
-  border: 1px solid black;
-  margin:0px auto;
+  ${'' /* border: 1px solid black; */}
+  margin:40px auto;
   display:flex;
   flex-direction:row;
-  justify-content: center;
+  justify-content: space-between;
 `;
 
 
