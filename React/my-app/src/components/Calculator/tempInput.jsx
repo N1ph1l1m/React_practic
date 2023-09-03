@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import boilingVerdict from "./boilingVerdict"
 
 
 
@@ -34,23 +35,20 @@ const scaleItem = {
 export default class TemperatureInput extends React.Component{
     constructor(props){
         super(props);
-        this.state = {temperature:''};
         this.handleChangeTemp = this.handleChangeTemp.bind(this);
     }
     handleChangeTemp(e){
-        this.setState({temperature: e.target.value});
+        this.props({temperature: e.target.value});
     }
     render() {
         const scale = this.props.scale;
-        const temperature = this.state.temperature;
+        const temperature = this.props.temperature;
         return (
             <TempWrap>
             <H1New>Введите температуру в градусах {scaleItem[scale]}:</H1New>
-        
             <InputItem value={temperature}
                        onChange = {this.handleChangeTemp}/>
             </TempWrap>
-      
         );
     }
 }
