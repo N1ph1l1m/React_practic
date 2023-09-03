@@ -7,13 +7,18 @@ import styled from "styled-components";
 
 const CalculatorWrap = styled.div`
   width: 700px;
-  min-height: 200px;
-  ${'' /* border: 1px solid black; */}
+  min-height: 100px;
+  border: 1px solid black;
   margin:40px auto;
   display:flex;
   flex-direction:row;
   justify-content: space-between;
 `;
+const BoilingWrap = styled.div`
+width:300px;
+height:50px;
+margin:0px auto;
+`
 
 function toCelsius(fahrenheit){
   return (fahrenheit - 32)* 5 / 9;
@@ -33,13 +38,50 @@ function tryConvert(temperature,convert){
 }
 
 export default class Calculator extends React.Component{
+  constructor(props) {
+    super(props);
+    this.state = {
+      temperature:'',
+      scale: 'c'
+  }
+  this.handleCelsiusChange  = this.handleCelsiusChange.bind(this);
+  this.handleFahrenheitChange = this.handleFahrenheitChange.bind(this);
+  }
+  handleCelsiusChange(temperature) {
+    this.setState({scale: 'c', temperature});
+  }
+
+  handleFahrenheitChange(temperature) {
+    this.setState({scale: 'f', temperature});
+  }
    
     render(){
+      const scale = this.state.scale;
+      const temperature = this.state.temperature;
+      const celsius = scale === 'f' ? tryConvert(temperature,toCelsius) : temperature;
+      const fahrenheit = scale === 'c' ? tryConvert(temperature,toFahrenheit) : temperature;
         return(
-           <CalculatorWrap>
-            <TemperatureInput scale ='c'/>
-            <TemperatureInput scale = 'f'/>
+          <>
+            <CalculatorWrap>
+            <TemperatureInput 
+              scale ='c'
+              temperature={celsius}
+              onTemperatureChange = {this.handleCelsiusChange}
+            />
+            <TemperatureInput 
+              scale = 'f'
+              temperature = {fahrenheit}
+              onTemperatureChange = {this.handleFahrenheitChange}  
+              />
            </CalculatorWrap>
+           <BoilingWrap>
+           <Boiling
+                celsius = {parseFloat(celsius)}
+              />
+           </BoilingWrap>
+           
+          </>
+           
         )
     }
 }

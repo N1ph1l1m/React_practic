@@ -38,7 +38,7 @@ export default class TemperatureInput extends React.Component{
         this.handleChangeTemp = this.handleChangeTemp.bind(this);
     }
     handleChangeTemp(e){
-        this.props({temperature: e.target.value});
+        this.props.onTemperatureChange(e.target.value);
     }
     render() {
         const scale = this.props.scale;
