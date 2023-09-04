@@ -63,7 +63,6 @@ export default class SecondComponent extends React.Component {
         if(this.state.show === true){
             return(
               <this.secondCmp/>
-            
             );
         }
     } 
