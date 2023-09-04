@@ -1,7 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import boilingVerdict from "./boilingVerdict"
-
 
 
 const TempWrap = styled.div`

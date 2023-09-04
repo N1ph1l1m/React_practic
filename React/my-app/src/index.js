@@ -10,6 +10,7 @@ import FormsComponent from './components/FormsComponent';
 import App from './components/app/app';
 import Root from './components/Router/root';
 import Calculator from './components/Calculator';
+import Composition from './components/Composition';
 import SecondComponent from './components/SecondComponent/secondComponent';
 
 const router  = createBrowserRouter([
@@ -33,6 +34,10 @@ const router  = createBrowserRouter([
         {
             path:"/temp",
             element:<Calculator/>
+        },
+        {
+            path:"/composit",
+            element:<Composition/>
         },
       ]
     },

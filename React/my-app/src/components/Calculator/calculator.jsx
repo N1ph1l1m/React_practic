@@ -8,7 +8,6 @@ import styled from "styled-components";
 const CalculatorWrap = styled.div`
   width: 700px;
   min-height: 100px;
-  border: 1px solid black;
   margin:40px auto;
   display:flex;
   flex-direction:row;
@@ -76,12 +75,10 @@ export default class Calculator extends React.Component{
            </CalculatorWrap>
            <BoilingWrap>
            <Boiling
-                celsius = {parseFloat(celsius)}
+              celsius = {parseFloat(celsius)}
               />
            </BoilingWrap>
-           
           </>
-           
         )
     }
 }

@@ -1,7 +1,11 @@
 import React from "react";
 import { Outlet,Link } from "react-router-dom";
 import { Nav, NavItem, NavLink} from "reactstrap";
+import styled from "styled-components";
 
+const OutletWRap = styled.div`
+margin-top:10px;
+`
 
 export default class Root extends React.Component{
     
@@ -49,10 +53,16 @@ export default class Root extends React.Component{
                 Temp
                 </Link></NavLink>
               </NavItem>
+              <NavItem>
+                <NavLink>
+                <Link to={"/composit"}>
+                Composition
+                </Link></NavLink>
+              </NavItem>
             </Nav>
-            <div id="detail">
+            <OutletWRap id="detail">
                 <Outlet />
-            </div>
+            </OutletWRap>
             </>
         );
     }
