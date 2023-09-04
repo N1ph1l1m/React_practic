@@ -59,6 +59,12 @@ export default class Root extends React.Component{
                 Composition
                 </Link></NavLink>
               </NavItem>
+              <NavItem>
+                <NavLink>
+                <Link to={"/game"}>
+                Game
+                </Link></NavLink>
+              </NavItem>
             </Nav>
             <OutletWRap id="detail">
                 <Outlet />

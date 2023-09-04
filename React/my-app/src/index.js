@@ -11,6 +11,7 @@ import App from './components/app/app';
 import Root from './components/Router/root';
 import Calculator from './components/Calculator';
 import Composition from './components/Composition';
+import Game from './components/game';
 import SecondComponent from './components/SecondComponent/secondComponent';
 
 const router  = createBrowserRouter([
@@ -38,6 +39,10 @@ const router  = createBrowserRouter([
         {
             path:"/composit",
             element:<Composition/>
+        },
+        {
+            path:"/game",
+            element:<Game/>
         },
       ]
     },
