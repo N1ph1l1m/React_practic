@@ -7,7 +7,6 @@ const CompositionWrap = styled.div`
 margin:0px auto;
 width:400px;
 height:400px;
-border:1px solid red;
 `;
 const Item1 = styled.div`
 margin:0px auto;

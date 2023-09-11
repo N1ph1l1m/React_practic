@@ -21,15 +21,7 @@ const ToggleOff = styled.div`
   border-radius: 50px;
 `;
 
-function formatName(user) {
-  return user.fist + "  " + user.last;
-}
-const user = {
-  fist: "Max",
-  last: "Morena",
-};
 
-const element = <h1>Hello , {formatName(user)}</h1>;
 export default class App extends React.Component {
   constructor(props) {
     super(props);
@@ -77,7 +69,6 @@ export default class App extends React.Component {
         <Container>
           <FirstComponent />
         </Container>
-        <Container>{element}</Container>
         <Container>
           <div>
             <h2>Now {this.state.date.toLocaleTimeString()}.</h2>
