@@ -20,8 +20,6 @@ height:200px;
 padding-left:20px;
 `
 function FancyBorder(props){
-
-
     return(
         <div className={'FancyBorder FancyBorder-' + props.color}>
         {props.children}
