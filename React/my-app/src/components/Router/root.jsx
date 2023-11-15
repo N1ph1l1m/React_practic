@@ -67,6 +67,12 @@ export default class Root extends React.Component{
               </NavItem>
               <NavItem>
                 <NavLink>
+                <Link to={"/devComponents"}>
+                Components
+                </Link></NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink>
                 <Link to={"/modal"}>
                 Modal
                 </Link></NavLink>

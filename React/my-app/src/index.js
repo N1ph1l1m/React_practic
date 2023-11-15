@@ -13,6 +13,7 @@ import Calculator from './components/Calculator';
 import Composition from './components/Composition';
 import Game from './components/game';
 import SecondComponent from './components/SecondComponent/secondComponent';
+import DevComponetns from './components/webDevComponents';
 import ModalWindows from './components/ModalWindows';
 
 const router  = createBrowserRouter([
@@ -44,6 +45,10 @@ const router  = createBrowserRouter([
         {
             path:"/game",
             element:<Game/>
+        },
+        {
+            path:"/devComponents",
+            element:<DevComponetns/>
         },
         {
             path:"/modal",
