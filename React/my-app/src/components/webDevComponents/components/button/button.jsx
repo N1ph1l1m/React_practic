@@ -5,7 +5,12 @@ import classNames from 'classnames';
 import './button.css'
 
 const Button = ({
-    children, onClick, className, disabled, active, ...attrs
+    children, //даныне которые будут передаваться кнопке  и которая она будет отображать
+    onClick,// функция которая будет передаваться кнопке 
+     className,// передаваемые стили
+     disabled, // не актиное состояние кнопки
+     active, // активное состояние 
+      ...attrs
   }) => {
     const onClickAction = e => {
       if (disabled) {
@@ -16,9 +21,9 @@ const Button = ({
     };
   
     const classes = classNames(
-      'btn',
-      className,
-      { active },
+      'btn',// стандартный стиль кнопки
+      className,// передаваемый класс кнопки через пропс 
+      { active },// применяется стиль к кнопке если состояние активное
     );
   
     const Tag = attrs.href ? 'a' : 'button';
@@ -34,7 +39,7 @@ const Button = ({
       </Tag>
     );
   };
-  
+  // присваевание типов к каждому пропсу 
   Button.propTypes = {
     children: PropTypes.node,
     onClick: PropTypes.func,
@@ -42,9 +47,9 @@ const Button = ({
     disabled: PropTypes.bool,
     active: PropTypes.bool,
   };
-  
+  // дефолтное значение пропсов
   Button.defaultProps = {
-    children: 'Default button',
+    children: 'My Button',
     onClick: () => {},
     className: '',
     disabled: false,

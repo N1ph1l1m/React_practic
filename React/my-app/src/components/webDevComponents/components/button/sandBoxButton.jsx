@@ -1,6 +1,7 @@
 /* eslint-disable */
 import React, { Fragment } from 'react';
 import Button from './button';
+
 const Sandbox = () => (
   <Fragment>
 
@@ -11,16 +12,16 @@ const Sandbox = () => (
     <Button onClick={() => { console.log('!!!!'); }} disabled />
 
     <h2><span>3. Active button:</span></h2>
-    <Button active />
+    <Button className='newWidth'>Claasses</Button>
 
     <h2><span>4. Supporting data, type and etc. attributes:</span></h2>
-    <Button data-name="button" />
-    <Button type="submit" />
+    <Button data-name="button">Button</Button>
+    <Button type="submit" >Submit</Button>
 
     <h2><span>5. Button link</span></h2>
     <Button href="test">Link</Button>
     <Button href="test" disabled>Link</Button>
-
+    <Button></Button>
   </Fragment>
 );
 
