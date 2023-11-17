@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import SandBoxButton from "./components/button/sandBoxButton";
-import SandBoxGroupButton from "../webDevComponents/components/groupButton/sandBoxGroupButton"
+import SandBoxGroupButton from "../webDevComponents/components/groupButton/sandBoxGroupButton";
+import SandBoxIcon from "./components/icon/sandBoxIcon";
 
 const ContentWrap = styled.div`
 ${'' /* margin:0px auto; */}
@@ -19,13 +20,18 @@ export default class DevComponetns extends React.Component{
                 <h1>Course components cours WebDev</h1> 
 
 
-                <ContentWrap>
+                {/* <ContentWrap>
                 <h2> Button</h2>
                 <SandBoxButton></SandBoxButton>
                 </ContentWrap>
                 <ContentWrap>
                 <h2> Group Button</h2>
                 <SandBoxGroupButton></SandBoxGroupButton>
+                </ContentWrap> */}
+
+                <ContentWrap>
+                <h2> Icon</h2>
+                <SandBoxIcon></SandBoxIcon>
                 </ContentWrap>
                
                
