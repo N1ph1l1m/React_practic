@@ -92,7 +92,7 @@ export default class DevComponetns extends React.Component{
                 return (
                     <ContentItem>
                         <h2>Group Button</h2>
-                        <SandBoxGroupButton></SandBoxGroupButton>
+                        <SandBoxGroupButton/>
                     </ContentItem>
                 );
             case 3:

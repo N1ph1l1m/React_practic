@@ -2,6 +2,12 @@
 import React, { Fragment, Component } from 'react';
 import ButtonGroup from '../groupButton/groupButton'
 import Button from '../button/button'
+import styled from "styled-components";
+
+
+const WrapSandBox = styled.div`
+margin:10px auto;
+`
 
 class Sandbox extends Component {
   state = {
@@ -20,29 +26,31 @@ class Sandbox extends Component {
     const { switchOn } = this.state;
 
     return (
-      <Fragment>
+    
+      <WrapSandBox> 
+       <h2><span>1. Horizontal button group:</span></h2>
+      <ButtonGroup>
+        <Button active>First</Button>
+        <Button>Middle</Button>
+        <Button>Last</Button>
+      </ButtonGroup>
 
-        <h2><span>1. Horizontal button group:</span></h2>
-        <ButtonGroup>
-          <Button active>First</Button>
-          <Button>Middle</Button>
-          <Button>Last</Button>
-        </ButtonGroup>
+      <h2><span>2. Vertical button group:</span></h2>
+      <ButtonGroup vertical >
+        <Button className='newWidth'>First</Button>
+        <Button  active>Middle</Button>
+        <Button>Last</Button>
+      </ButtonGroup>
 
-        <h2><span>2. Vertical button group:</span></h2>
-        <ButtonGroup vertical>
-          <Button>First</Button>
-          <Button active>Middle</Button>
-          <Button>Last</Button>
-        </ButtonGroup>
+      <h2><span>3. Switcher button group:</span></h2>
+      <ButtonGroup>
+        <Button onClick={this.handleSwitchOn} active={switchOn}>ON</Button>
+        <Button onClick={this.handleSwitchOff} active={!switchOn}>OFF</Button>
+      </ButtonGroup>
 
-        <h2><span>3. Switcher button group:</span></h2>
-        <ButtonGroup>
-          <Button onClick={this.handleSwitchOn} active={switchOn}>ON</Button>
-          <Button onClick={this.handleSwitchOff} active={!switchOn}>OFF</Button>
-        </ButtonGroup>
+      </WrapSandBox>
+      
 
-      </Fragment>
     );
   }
 }
