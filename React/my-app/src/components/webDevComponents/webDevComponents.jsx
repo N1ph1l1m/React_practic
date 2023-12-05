@@ -4,6 +4,7 @@ import SandBoxButton from "./components/button/sandBoxButton";
 import SandBoxGroupButton from "../webDevComponents/components/groupButton/sandBoxGroupButton";
 import SandBoxIcon from "./components/icon/sandBoxIcon";
 import SandBoxImage from "./components/image/SandBoxImage";
+import SandBoxСhip from "./chip/SandBoxChip";
 
 const MainLayout = styled.div`
 width:1300px;
@@ -62,6 +63,7 @@ export default class DevComponetns extends React.Component{
         this.handlerButtonGroup = this.handlerButtonGroup.bind(this);
         this.handlerIcon = this.handlerIcon.bind(this);
         this.handlerImage = this.handlerImage.bind(this);
+        this.handlerChip = this.handlerChip.bind(this);
 
     }
 
@@ -84,6 +86,11 @@ export default class DevComponetns extends React.Component{
     handlerImage(){
         this.setState((prevState) =>({
             elem:4,
+        }));
+    }
+    handlerChip(){
+        this.setState((prevState) =>({
+            elem:5,
         }));
     }
     
@@ -118,6 +125,13 @@ export default class DevComponetns extends React.Component{
                             <SandBoxImage></SandBoxImage>
                         </ContentItem>
                     );
+                case 5:
+                    return (
+                        <ContentItem>
+                            <h2>Chip</h2>
+                           <SandBoxСhip></SandBoxСhip>
+                        </ContentItem>
+                    );
                 
                 
             default:
@@ -141,6 +155,7 @@ export default class DevComponetns extends React.Component{
                 <NavButton onClick={this.handlerButtonGroup}>Button Group</NavButton>
                 <NavButton onClick={this.handlerIcon}>Icon</NavButton>
                 <NavButton onClick={this.handlerImage}>Image</NavButton>
+                <NavButton onClick={this.handlerChip}>Chip</NavButton>
             </NavigatorWrap>
            
             <ContentWrap>
