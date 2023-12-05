@@ -7,10 +7,10 @@ const SandBoxСhip = () => (
   <Fragment>
 
     <h2><span>1. Chip with text:</span></h2>
-    <Chip text="User name"  className='smallChip'/>
+    <Chip text="User name"/>
 
     <h2><span>2. Chip with long text:</span></h2>
-    <Chip text="Very long chip text should be cropped" />
+    <Chip  text="Very long chip text should be cropped" />
 
     <h2><span>3. Chips with icon and close button:</span></h2>
     <Chip text="Chip" widhIcon name="award"/>
