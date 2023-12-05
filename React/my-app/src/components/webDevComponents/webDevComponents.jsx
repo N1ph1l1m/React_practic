@@ -3,6 +3,7 @@ import styled from "styled-components";
 import SandBoxButton from "./components/button/sandBoxButton";
 import SandBoxGroupButton from "../webDevComponents/components/groupButton/sandBoxGroupButton";
 import SandBoxIcon from "./components/icon/sandBoxIcon";
+import SandBoxImage from "./components/image/SandBoxImage";
 
 const MainLayout = styled.div`
 width:1300px;
@@ -60,6 +61,8 @@ export default class DevComponetns extends React.Component{
         this.handlerButton = this.handlerButton.bind(this);
         this.handlerButtonGroup = this.handlerButtonGroup.bind(this);
         this.handlerIcon = this.handlerIcon.bind(this);
+        this.handlerImage = this.handlerImage.bind(this);
+
     }
 
     handlerButton(){
@@ -78,6 +81,12 @@ export default class DevComponetns extends React.Component{
             elem:3,
         }));
     }
+    handlerImage(){
+        this.setState((prevState) =>({
+            elem:4,
+        }));
+    }
+    
     renderComponent() {
         switch (this.state.elem) {
             case 1:
@@ -102,6 +111,15 @@ export default class DevComponetns extends React.Component{
                         <SandBoxIcon></SandBoxIcon>
                     </ContentItem>
                 );
+                case 4:
+                    return (
+                        <ContentItem>
+                            <h2>Icon</h2>
+                            <SandBoxImage></SandBoxImage>
+                        </ContentItem>
+                    );
+                
+                
             default:
                 return null;
         }
@@ -122,6 +140,7 @@ export default class DevComponetns extends React.Component{
                 <NavButton onClick={this.handlerButton}>Button</NavButton>
                 <NavButton onClick={this.handlerButtonGroup}>Button Group</NavButton>
                 <NavButton onClick={this.handlerIcon}>Icon</NavButton>
+                <NavButton onClick={this.handlerImage}>Image</NavButton>
             </NavigatorWrap>
            
             <ContentWrap>
