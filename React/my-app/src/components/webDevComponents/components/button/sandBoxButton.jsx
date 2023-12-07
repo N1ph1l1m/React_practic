@@ -3,7 +3,7 @@ import React, { Fragment } from 'react';
 import Button from './button';
 
 const Sandbox = () => (
-  <Fragment>
+  <div className='centerWrap'>
 
     <h2><span>1. Text and onClick function:</span></h2>
     <Button onClick={() => { console.log('!!!!'); }}>Button text</Button>
@@ -22,7 +22,7 @@ const Sandbox = () => (
     <Button href="test">Link</Button>
     <Button href="test" disabled>Link</Button>
     <Button></Button>
-  </Fragment>
+  </div>
 );
 
 export default Sandbox;

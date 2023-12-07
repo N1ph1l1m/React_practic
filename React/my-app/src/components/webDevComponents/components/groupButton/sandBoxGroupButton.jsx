@@ -26,8 +26,8 @@ class Sandbox extends Component {
     const { switchOn } = this.state;
 
     return (
-    
-      <WrapSandBox> 
+      <div className='centerWrap'>
+ <WrapSandBox> 
        <h2><span>1. Horizontal button group:</span></h2>
       <ButtonGroup>
         <Button active>First</Button>
@@ -50,6 +50,8 @@ class Sandbox extends Component {
 
       </WrapSandBox>
       
+      </div>
+     
 
     );
   }

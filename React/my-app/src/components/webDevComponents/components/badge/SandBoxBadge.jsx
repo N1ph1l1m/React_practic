@@ -8,16 +8,20 @@ const Sandbox = () => (
   <Fragment>
 
     <h2><span>1. Badges with text:</span></h2>
-    <Button style={{ marginRight: '20px' }}>
-      <Icon name="envelope" />
-      <Badge value="new" />
-    </Button>
     <Button>
+      <Badge  value="new" />
       <Icon name="envelope" />
-      <Badge circle value="new" />
+
+   
+    
     </Button>
 
-    <h2><span>2. Badges with number:</span></h2>
+    {/* <Button>
+      <Icon name="envelope" />
+      <Badge circle value="new" />
+    </Button> 
+
+     <h2><span>2. Badges with number:</span></h2>
     <Button style={{ marginRight: '20px' }}>
       <Icon name="comment" />
       <Badge value={2} />
@@ -80,7 +84,7 @@ const Sandbox = () => (
     <Button style={{ marginRight: '20px' }}>
       <Icon name="rss" />
       <Badge info value={1} />
-    </Button>
+    </Button> */}
 
   </Fragment>
 );

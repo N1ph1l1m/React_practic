@@ -4,7 +4,7 @@ import Chip from './chip';
 import Example from './Example';
 
 const SandBoxСhip = () => (
-  <Fragment>
+  <div className='centerWrap '>
 
     <h2><span>1. Chip with text:</span></h2>
     <Chip text="User name"/>
@@ -49,9 +49,9 @@ const SandBoxСhip = () => (
     />
 
     <h2><span>7. Example of using:</span></h2>
-    {/* <Example /> */}
+    <Example />
 
-  </Fragment>
+  </div>
 );
 
 export default SandBoxСhip;

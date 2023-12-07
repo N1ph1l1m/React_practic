@@ -13,7 +13,7 @@ const MainLayout = styled.div`
   display: flex;
   justify-content: start;
   flex-flow: row wrap;
-  overflow: hidden;
+  overflow: hidden;  
 `;
 const ContentWrap = styled.div`
   width: 1090px;

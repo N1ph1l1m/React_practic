@@ -5,9 +5,10 @@ import classNames from 'classnames';
 import './badge.css';
 
 const Badge = ({
-value,circle,className,inline,outer,...attrs
+value,circle,className,inline,outer, ...attrs
 }) =>{
   const text = typeof value === 'string' || value instanceof String;
+
   const classes = classNames(
     'badge',
     { circle },
@@ -15,13 +16,14 @@ value,circle,className,inline,outer,...attrs
     { inline },
     { outer },
     { text },
-    { warning:attrs.warning},
-    { alert:attrs.alert},
-    { success:attrs.success},
-    { info:attrs.info},
+    { warning: attrs.warning },
+    { alert: attrs.alert },
+    { success: attrs.success },
+    { info: attrs.info },
   );
+
     return(
-    <span classNames={classes}>
+    <span className={classes}>
         {value}
     </span>
     )
