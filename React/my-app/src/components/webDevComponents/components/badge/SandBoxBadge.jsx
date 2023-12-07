@@ -4,42 +4,67 @@ import Badge from './badge';
 import Button from '../button/button';
 import Icon from '../icon/icon';
 
+import styled from "styled-components";
+
+const BadgeWrap =styled.div`
+display: block;
+position: relative;
+/* border:2px solid green; */
+width: max-content;
+height: max-content;`
+
 const Sandbox = () => (
   <Fragment>
 
     <h2><span>1. Badges with text:</span></h2>
-    <Button>
-      <Badge  value="new" />
-      <Icon name="envelope" />
 
-   
+    <BadgeWrap>  
+    <Badge value="new"  className='positBadge'/>
+    <Button>
+      <Icon name="envelope" />
+    </Button>
+    </BadgeWrap>
     
-    </Button>
-
-    {/* <Button>
-      <Icon name="envelope" />
-      <Badge circle value="new" />
-    </Button> 
-
-     <h2><span>2. Badges with number:</span></h2>
-    <Button style={{ marginRight: '20px' }}>
-      <Icon name="comment" />
-      <Badge value={2} />
-    </Button>
+    <BadgeWrap>
+    <Badge circle value="new" />
     <Button>
-      <Icon name="comment-dots" />
-      <Badge circle value={12} />
+      <Icon name="envelope" />
     </Button>
+    </BadgeWrap>
+  
+
+    <h2><span>2. Badges with number:</span></h2>
+    <BadgeWrap>
+    <Badge value={2} />
+    <Button>
+      <Icon name="comment" />  
+    </Button>
+    </BadgeWrap>
+   
+
+   <BadgeWrap>
+    <Badge circle value={12} />
+     <Button>
+      <Icon name="comment-dots" />
+    </Button>
+   </BadgeWrap>
+
 
     <h2><span>3. Inline Badges:</span></h2>
-    <Button style={{ marginRight: '20px' }}>
+    <BadgeWrap>
+        <Badge value={1} />  
+        <Button>
       <Icon name="phone" />
-      <Badge inline value={1} />
     </Button>
+    </BadgeWrap>
+
+    <BadgeWrap>
+      <Badge inline value="1 missed" />
     <Button>
       <Icon name="phone" />
-      <Badge inline value="1 missed" />
     </Button>
+    </BadgeWrap>
+  
 
     <h2><span>4. Outer Badges:</span></h2>
     <Button style={{ marginRight: '20px' }}>
@@ -52,39 +77,37 @@ const Sandbox = () => (
     </Button>
 
     <h2><span>5. Warning, Alert, Success, Info Badges:</span></h2>
-    <Button style={{ marginRight: '20px', marginBottom: '20px' }}>
-      <Icon name="bullhorn" />
-      <Badge circle warning value={1} />
-    </Button>
-    <Button style={{ marginRight: '20px' }}>
-      <Icon name="inbox" />
-      <Badge circle alert value={1} />
-    </Button>
-    <Button style={{ marginRight: '20px' }}>
-      <Icon name="paper-plane" />
-      <Badge circle success value={1} />
-    </Button>
+
+  <BadgeWrap>
+    <Badge circle warning value={1} />
     <Button>
-      <Icon name="rss" />
-      <Badge circle info value={1} />
+        <Icon name="bullhorn" />
     </Button>
-    <br />
-    <Button style={{ marginRight: '20px' }}>
-      <Icon name="bullhorn" />
-      <Badge warning value={1} />
+  </BadgeWrap>
+  <br />
+
+  <BadgeWrap>
+    <Badge circle alert value={1} />
+    <Button>
+    <Icon name="inbox" />
     </Button>
-    <Button style={{ marginRight: '20px' }}>
-      <Icon name="inbox" />
-      <Badge alert value={1} />
+  </BadgeWrap>
+  <br />
+  <BadgeWrap>
+  <Badge circle success value={1} />
+    <Button>
+    <Icon name="paper-plane" />
     </Button>
-    <Button style={{ marginRight: '20px' }}>
-      <Icon name="paper-plane" />
-      <Badge success value={1} />
+  </BadgeWrap>
+  <br />
+
+  
+  <BadgeWrap>
+  <Badge circle info value={1} />
+    <Button>
+    <Icon name="rss" />
     </Button>
-    <Button style={{ marginRight: '20px' }}>
-      <Icon name="rss" />
-      <Badge info value={1} />
-    </Button> */}
+  </BadgeWrap>
 
   </Fragment>
 );
