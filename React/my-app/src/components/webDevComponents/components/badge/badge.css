@@ -16,16 +16,12 @@
   top: -13px;
   right: -8px;
   z-index: 9999;
-}
-.positBadge{
-
-  width:;
+  
 }
 
 .inline {
   position: static;
   display: inline-block;
-  margin-left: 10px;
 }
 
 .text {

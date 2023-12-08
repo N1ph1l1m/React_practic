@@ -25,7 +25,7 @@ value,circle,className,inline,outer, ...attrs
     return(
     <span className={classes}>
         {value}
-    </span>
+    </span>    
     )
 };
 
