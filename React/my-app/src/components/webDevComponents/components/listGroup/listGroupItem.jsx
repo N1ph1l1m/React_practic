@@ -3,9 +3,31 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 
+import './listGroupItem.css';
 
-const ListGroupItem = ({})=>{
-    
+const ListGroupItem = ({
+    tag:Tag,
+    children,
+    className,
+    disabled,
+    active,
+    ...attrs
+})=>{
+    const classes = classNames(
+        'list-group-item',
+         className,
+         {active},
+         {disabled},
+    )
+
+    if(attrs.href && Tag === 'li'){
+        Tag = 'a';
+    }
+    return(
+        <Tag className={classes} {...attrs}>
+            {children}
+        </Tag>
+    )
 } 
 
 

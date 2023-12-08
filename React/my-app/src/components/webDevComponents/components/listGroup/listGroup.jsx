@@ -6,9 +6,20 @@ import classNames from 'classnames';
 import './listGroup.css';
 
 const ListGroup  = ({
-
+    tag: Tag,
+    children,
+    className,
+    ...atts
 }) =>{
-
+    const classes = classNames(
+        'list-group',
+        className,
+    )
+return(
+    <Tag className={classes} {...atts}>
+        {children}
+    </Tag>
+)
 }
 
 ListGroup.propTypes = {
