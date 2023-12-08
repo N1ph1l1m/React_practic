@@ -15,6 +15,7 @@ const BadgeWrap = styled.div`
 `;
 
 const InlineWrap = styled.div`
+  margin:0px auto;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;

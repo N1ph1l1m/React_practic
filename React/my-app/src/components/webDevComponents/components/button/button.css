@@ -1,15 +1,17 @@
 .btn {
-  position: relative;
-  padding: 10px 15px;
+  /* padding: 10px 15px; */
   background-color: #7CC6fE;
-  border: none;
+  border: 3px solid black;
   color: #FFF;
   font-weight: 600;
   cursor: pointer;
   text-transform: uppercase;
   display: inline-block;
   text-decoration: none;
-  width: max-content;
+  /* margin-bottom: 13px; */
+  width: 150px;
+  margin:0px auto;
+  
 }
 
 .btn:hover {
@@ -27,7 +29,7 @@
   box-shadow: 0px 0 2px 0px #C0C0C0;
 }
 
-  .newWidth{
-    width: 320px;
-    background-color:cadetblue;
-  }
+.newWidth{
+  width: 320px;
+  background-color:cadetblue;
+}
