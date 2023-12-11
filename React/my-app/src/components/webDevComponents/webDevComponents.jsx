@@ -8,7 +8,8 @@ import SandBoxСhip from "./components/chip/SandBoxChip";
 import SandBoxBadge from "./components/badge/SandBoxBadge";
 import SandboxListGroup from "./components/listGroup/SandBodListGroup";
 import SandBoxInput from "./components/input/SandBoxInput"
-import SandboxTabBar from "./components/tabbar/SandBoxTabBar";
+import SandboxTabBar from "./components/tabBar/SandBoxTabBar";
+import SandboxToolTip from "./components/toolTip/SandBoxToolTip";
 
 const MainLayout = styled.div`
   width: 1300px;
@@ -70,6 +71,7 @@ export default class DevComponetns extends React.Component {
     this.handlerListGroup = this.handlerListGroup.bind(this);
     this.handlerInput = this.handlerInput.bind(this);
     this.handlerTabBar = this.handlerTabBar.bind(this);
+    this.handlerToolTip = this.handlerToolTip.bind(this)
   }
 
   handlerButton() {
@@ -118,6 +120,12 @@ export default class DevComponetns extends React.Component {
       elem: 9,
     }));
   }
+  handlerToolTip(){
+    this.setState((prevState) => ({
+      elem: 10,
+    }));
+  }
+
 
   renderComponent() {
     switch (this.state.elem) {
@@ -172,8 +180,6 @@ export default class DevComponetns extends React.Component {
                   <SandboxListGroup></SandboxListGroup>
                 </ContentItem>
               );
-  
-
             case 8 :
               return (
                 <ContentItem>
@@ -188,6 +194,13 @@ export default class DevComponetns extends React.Component {
                     <SandboxTabBar></SandboxTabBar>
                   </ContentItem>
                 );
+                case 10 :
+                  return (
+                    <ContentItem>
+                      <h2>TabBar</h2>
+                      <SandboxToolTip></SandboxToolTip>
+                    </ContentItem>
+                  );
 
       default:
         return null;
@@ -215,6 +228,7 @@ export default class DevComponetns extends React.Component {
           <NavButton onClick={this.handlerListGroup}>ListGroup</NavButton>
           <NavButton onClick={this.handlerInput}>Input</NavButton>
           <NavButton onClick={this.handlerTabBar}>Tab Bar</NavButton>
+          <NavButton onClick={this.handlerToolTip}>Tool  Tip</NavButton>
         </NavigatorWrap>
 
         <ContentWrap>{component}</ContentWrap>
