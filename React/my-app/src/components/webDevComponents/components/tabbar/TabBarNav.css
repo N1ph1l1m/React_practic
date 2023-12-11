@@ -1,4 +1,4 @@
-.nav-item {
+.navItem {
     flex: 1;
     background-color: #FFF;
     border: 1px solid #EDEDED;
@@ -11,13 +11,13 @@
     font-weight: 600;
   }
   
-  .nav-item.active {
+  .navItem.active {
     background-color: #7CC6FE;
     border-bottom-color: transparent;
     color: #FFF;
   }
   
-  .vertical .nav-item {
+  .vertical .navItem {
     border-radius: 5px 0 0 5px;
   }
   

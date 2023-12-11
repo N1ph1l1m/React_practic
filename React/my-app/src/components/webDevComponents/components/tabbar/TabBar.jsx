@@ -30,7 +30,7 @@ class TabBar extends Component{
       setActiveTab = activeTab =>{
         const {activeTab:currentTab} = this.state;
 
-        if(currentTab != activeTab){
+        if(currentTab !== activeTab){
             this.setState({
                 activeTab,
             });
@@ -74,4 +74,6 @@ class TabBar extends Component{
         )
       }
 }
-export default TabBar
+
+
+export default TabBar;

@@ -2,18 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-import './TabBarNav.css';
+import   './TabBarNav.css';
 
-const TabBarNav = ({
-    navLabel,
-    className,
-    onChangeActiveTab
-}) =>{
 
+const TabBarNav = ({ navLabel, className, onChangeActiveTab }) => {
     const classes = classNames(
         className,
-        'nav-item,'
+        'navItem',
     );
+
     return(
         <button 
         type="button"
@@ -25,7 +22,7 @@ const TabBarNav = ({
     );
 
     
-}
+};
 
 TabBarNav.propTypes = {
     navLabel: PropTypes.string,

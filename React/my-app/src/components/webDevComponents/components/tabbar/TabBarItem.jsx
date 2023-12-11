@@ -13,7 +13,7 @@ const TabBarItem = ({
     const classes = classNames(
         'tab-bar-item',
         {
-            activeTab:activeTab = label,
+            active: activeTab ===label,
         }
     );
     return (
