@@ -1,12 +1,12 @@
 .list-group-item {
     position: relative;
     list-style-type: none;
-    border: 1px solid #EDEDED;
+    border: 1px solid #3d3838;
     display: inline-flex;
     padding: 10px 20px;
     justify-content: space-between;
     align-items: center;
-    min-width: 200px;
+    min-width: 300px;
   }
   
   .list-group-item:not(:last-child) {
