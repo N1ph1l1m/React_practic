@@ -197,7 +197,7 @@ export default class DevComponetns extends React.Component {
                 case 10 :
                   return (
                     <ContentItem>
-                      <h2>TabBar</h2>
+                      <h2>Tool Tip</h2>
                       <SandboxToolTip></SandboxToolTip>
                     </ContentItem>
                   );

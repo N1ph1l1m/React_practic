@@ -1,16 +1,16 @@
 /* eslint-disable */
 import React, { Fragment } from 'react';
-import Tooltip from './Tooltip';
+import Tooltip from './toolTip';
 import Button from '../button/button';
 
-const SandboxToolTip = () => (
+const Sandbox = () => (
   <Fragment>
     <h2><span>1. Simple Right tooltip with big description:</span></h2>
-    {/* <Tooltip
+    <Tooltip
       position="right"
       content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a"
     >
-      Test
+     Lorem Ipsum is simply dummy text of the
     </Tooltip>
 
     <h2><span>2. Left tooltip with outer styles:</span></h2>
@@ -38,9 +38,9 @@ const SandboxToolTip = () => (
     >
       <span style={{ textDecoration: 'underline', padding: '0 4px' }}>Lorem</span>
     </Tooltip>
-    Ipsum has been the industry's standard dummy text ever since the 1500s</p> */}
+    Ipsum has been the industry's standard dummy text ever since the 1500s</p>
   </Fragment>
 );
 
-export default SandboxToolTip;
+export default Sandbox;
 /* eslint-enable */
