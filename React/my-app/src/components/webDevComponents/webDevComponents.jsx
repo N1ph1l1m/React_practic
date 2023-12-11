@@ -7,6 +7,7 @@ import SandBoxImage from "./components/image/SandBoxImage";
 import SandBoxСhip from "./components/chip/SandBoxChip";
 import SandBoxBadge from "./components/badge/SandBoxBadge";
 import SandboxListGroup from "./components/listGroup/SandBodListGroup";
+import SandBoxInput from "./components/input/SandBoxInput"
 
 const MainLayout = styled.div`
   width: 1300px;
@@ -66,6 +67,7 @@ export default class DevComponetns extends React.Component {
     this.handlerChip = this.handlerChip.bind(this);
     this.handlerBadge = this.handlerBadge.bind(this);
     this.handlerListGroup = this.handlerListGroup.bind(this);
+    this.handlerInput = this.handlerInput.bind(this);
   }
 
   handlerButton() {
@@ -102,6 +104,11 @@ export default class DevComponetns extends React.Component {
   handlerListGroup() {
     this.setState((prevState) => ({
       elem: 7,
+    }));
+  }
+  handlerInput() {
+    this.setState((prevState) => ({
+      elem: 8,
     }));
   }
 
@@ -151,12 +158,20 @@ export default class DevComponetns extends React.Component {
                 <SandBoxBadge></SandBoxBadge>
               </ContentItem>
             );
-
-            case 7 :
+            case 7:
               return (
                 <ContentItem>
                   <h2>ListGroup</h2>
                   <SandboxListGroup></SandboxListGroup>
+                </ContentItem>
+              );
+  
+
+            case 8 :
+              return (
+                <ContentItem>
+                  <h2>Input</h2>
+                  <SandBoxInput></SandBoxInput>
                 </ContentItem>
               );
 
@@ -184,6 +199,7 @@ export default class DevComponetns extends React.Component {
           <NavButton onClick={this.handlerChip}>Chip</NavButton>
           <NavButton onClick={this.handlerBadge}>Badge</NavButton>
           <NavButton onClick={this.handlerListGroup}>ListGroup</NavButton>
+          <NavButton onClick={this.handlerInput}>Input</NavButton>
         </NavigatorWrap>
 
         <ContentWrap>{component}</ContentWrap>
