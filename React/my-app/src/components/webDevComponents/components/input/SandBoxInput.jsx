@@ -43,6 +43,4 @@ const SandBoxInput = () => (
   
     </div>
   );
-  
   export default SandBoxInput;
-  /* eslint-enable */
