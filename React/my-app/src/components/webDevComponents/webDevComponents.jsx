@@ -8,6 +8,7 @@ import SandBoxСhip from "./components/chip/SandBoxChip";
 import SandBoxBadge from "./components/badge/SandBoxBadge";
 import SandboxListGroup from "./components/listGroup/SandBodListGroup";
 import SandBoxInput from "./components/input/SandBoxInput"
+import SandboxTabBar from "./components/tabbar/SandBoxTabBar";
 
 const MainLayout = styled.div`
   width: 1300px;
@@ -68,6 +69,7 @@ export default class DevComponetns extends React.Component {
     this.handlerBadge = this.handlerBadge.bind(this);
     this.handlerListGroup = this.handlerListGroup.bind(this);
     this.handlerInput = this.handlerInput.bind(this);
+    this.handlerTabBar = this.handlerTabBar.bind(this);
   }
 
   handlerButton() {
@@ -109,6 +111,11 @@ export default class DevComponetns extends React.Component {
   handlerInput() {
     this.setState((prevState) => ({
       elem: 8,
+    }));
+  }
+  handlerTabBar(){
+    this.setState((prevState) => ({
+      elem: 9,
     }));
   }
 
@@ -174,6 +181,13 @@ export default class DevComponetns extends React.Component {
                   <SandBoxInput></SandBoxInput>
                 </ContentItem>
               );
+              case 9 :
+                return (
+                  <ContentItem>
+                    <h2>TabBar</h2>
+                    <SandboxTabBar></SandboxTabBar>
+                  </ContentItem>
+                );
 
       default:
         return null;
@@ -200,6 +214,7 @@ export default class DevComponetns extends React.Component {
           <NavButton onClick={this.handlerBadge}>Badge</NavButton>
           <NavButton onClick={this.handlerListGroup}>ListGroup</NavButton>
           <NavButton onClick={this.handlerInput}>Input</NavButton>
+          <NavButton onClick={this.handlerTabBar}>Tab Bar</NavButton>
         </NavigatorWrap>
 
         <ContentWrap>{component}</ContentWrap>
