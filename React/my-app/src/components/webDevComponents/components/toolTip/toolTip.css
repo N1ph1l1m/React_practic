@@ -7,7 +7,7 @@
   cursor: pointer;
 }
 
-.tooltip {
+.tooltip1{
   position: absolute;
   padding: 10px;
   border-radius: 3px;
@@ -20,26 +20,26 @@
   z-index: 9999;
 }
 
-.tooltip.top {
+.tooltip1.top {
   bottom: 130%;
   transform: translateX(-50%);
-  left: 50%;
+  left: 30%;
 }
 
-.tooltip.bottom {
+.tooltip1.bottom {
   top: 130%;
   transform: translateX(-50%);
-  left: 50%;
+  left: 10%;
 }
 
-.tooltip.right {
-  left: 130%;
+.tooltip1.right {
+  left: 10%;
   transform: translateY(-50%);
-  top: 50%;
+  bottom: 50%;
 }
 
-.tooltip.left {
-  right: 130%;
+.tooltip1.left {
+  right: 90%;
   transform: translateY(-50%);
-  top: 50%;
+  bottom: 50%;
 }

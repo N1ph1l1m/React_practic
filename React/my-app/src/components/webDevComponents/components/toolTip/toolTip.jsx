@@ -26,10 +26,12 @@ class Tooltip extends Component {
   
     show = () => {
       this.setVisibility(true);
+      console.log(this.state.visible);
     }
   
     hide = () => {
       this.setVisibility(false);
+      console.log(this.state.visible);
     }
   
     setVisibility = visible => {
@@ -41,7 +43,7 @@ class Tooltip extends Component {
       const { children, content, style, position } = this.props;
   
       const classes = classNames(
-        'tooltip',
+        'tooltip1',
         position,
       );
   
