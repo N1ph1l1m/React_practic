@@ -9,7 +9,8 @@ const Button = ({
     onClick,// функция которая будет передаваться кнопке 
      className,// передаваемые стили
      disabled, // не актиное состояние кнопки
-     active, // активное состояние 
+     active,
+     invert, // активное состояние 
       ...attrs
   }) => {
     const onClickAction = e => {
@@ -24,6 +25,7 @@ const Button = ({
       'btn',// стандартный стиль кнопки
       className,// передаваемый класс кнопки через пропс 
       { active },// применяется стиль к кнопке если состояние активное
+      { invert },
     );
   
     const Tag = attrs.href ? 'a' : 'button';

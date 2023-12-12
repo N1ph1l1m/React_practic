@@ -1,19 +1,41 @@
 import React from "react";
 // import styled from "styled-components";
-// import Portal  from "./portal";
+ import Portal  from "./portal";
 import PropTypes from 'prop-types';
 
 import './modal.css';
+import Icon from "../icon/icon";
+import Button from "../button/button";
 
 
-const Modal = (
+const Modal = ({
     title, isOpen, onCancel, onSubmit, children,
+}
+    
 ) =>{
 
         return(
-        <>
-        <p>Modal111</p>
-        </>
+            <>
+                {isOpen && 
+                    <Portal>
+        <div className="modalOverlay">
+            <div className="modalWindow">
+
+                <div className="modalHeader">
+                <div className="modalTitle">{title}</div>
+                <Icon name="times" onClick={onCancel}/>
+                </div>
+                <div className="modalBody">
+                    {children}
+                </div>
+                <div className="modalFooter">
+                    <Button onClick={onCancel} invert>Cancel</Button>
+                    <Button onClick={onSubmit}>Submit</Button>
+                </div>
+            </div>
+        </div>
+        </Portal>}
+            </>
         )  
 };
 
