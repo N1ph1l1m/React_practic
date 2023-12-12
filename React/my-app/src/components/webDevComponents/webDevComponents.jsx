@@ -10,7 +10,7 @@ import SandboxListGroup from "./components/listGroup/SandBodListGroup";
 import SandBoxInput from "./components/input/SandBoxInput"
 import SandboxTabBar from "./components/tabBar/SandBoxTabBar";
 import SandboxToolTip from "./components/toolTip/SandBoxToolTip";
-
+import SandboxModal from "./components/modal/SandBoxModal";
 const MainLayout = styled.div`
   width: 1300px;
   min-height: 50%;
@@ -72,6 +72,7 @@ export default class DevComponetns extends React.Component {
     this.handlerInput = this.handlerInput.bind(this);
     this.handlerTabBar = this.handlerTabBar.bind(this);
     this.handlerToolTip = this.handlerToolTip.bind(this)
+    this.handlerModal = this.handlerModal.bind(this)
   }
 
   handlerButton() {
@@ -123,6 +124,11 @@ export default class DevComponetns extends React.Component {
   handlerToolTip(){
     this.setState((prevState) => ({
       elem: 10,
+    }));
+  }
+  handlerModal(){
+    this.setState((prevState) => ({
+      elem: 11,
     }));
   }
 
@@ -201,7 +207,13 @@ export default class DevComponetns extends React.Component {
                       <SandboxToolTip></SandboxToolTip>
                     </ContentItem>
                   );
-
+                  case 11 :
+                    return (
+                      <ContentItem>
+                        <h2>Modal</h2>
+                        <SandboxModal></SandboxModal>
+                      </ContentItem>
+                    );
       default:
         return null;
     }
@@ -229,6 +241,7 @@ export default class DevComponetns extends React.Component {
           <NavButton onClick={this.handlerInput}>Input</NavButton>
           <NavButton onClick={this.handlerTabBar}>Tab Bar</NavButton>
           <NavButton onClick={this.handlerToolTip}>Tool  Tip</NavButton>
+          <NavButton onClick={this.handlerModal}>Modal windows</NavButton>
         </NavigatorWrap>
 
         <ContentWrap>{component}</ContentWrap>
