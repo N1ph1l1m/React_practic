@@ -71,6 +71,12 @@ export default class Root extends React.Component{
                 Components
                 </Link></NavLink>
               </NavItem>
+              <NavItem>
+                <NavLink>
+                <Link to={"/devReact"}>
+                WebDevReact
+                </Link></NavLink>
+              </NavItem>
             </Nav>
             <OutletWRap id="detail">
                 <Outlet />
