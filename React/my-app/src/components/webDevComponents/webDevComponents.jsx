@@ -57,76 +57,78 @@ const NavButton = styled.button`
   }
 `;
 export default class DevComponetns extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      elem: 1,
-    };
-    this.handlerButton = this.handlerButton.bind(this);
-    this.handlerButtonGroup = this.handlerButtonGroup.bind(this);
-    this.handlerIcon = this.handlerIcon.bind(this);
-    this.handlerImage = this.handlerImage.bind(this);
-    this.handlerChip = this.handlerChip.bind(this);
-    this.handlerBadge = this.handlerBadge.bind(this);
-    this.handlerListGroup = this.handlerListGroup.bind(this);
-    this.handlerInput = this.handlerInput.bind(this);
-    this.handlerTabBar = this.handlerTabBar.bind(this);
-    this.handlerToolTip = this.handlerToolTip.bind(this)
-    this.handlerModal = this.handlerModal.bind(this)
-  }
+  // constructor(props) {
+  //   super(props);
+  
+  //   // this.handlerButton = this.handlerButton.bind(this);
+  //   // this.handlerButtonGroup = this.handlerButtonGroup.bind(this);
+  //   // this.handlerIcon = this.handlerIcon.bind(this);
+  //   // this.handlerImage = this.handlerImage.bind(this);
+  //   // this.handlerChip = this.handlerChip.bind(this);
+  //   // this.handlerBadge = this.handlerBadge.bind(this);
+  //   // this.handlerListGroup = this.handlerListGroup.bind(this);
+  //   // this.handlerInput = this.handlerInput.bind(this);
+  //   // this.handlerTabBar = this.handlerTabBar.bind(this);
+  //   // this.handlerToolTip = this.handlerToolTip.bind(this)
+  //   // this.handlerModal = this.handlerModal.bind(this)
+  // }
 
-  handlerButton() {
+  state = {
+    elem: 1,
+  };
+
+  handlerButton = () => {
     this.setState((prevState) => ({
       elem: 1,
     }));
     console.log("This state = ");
   }
-  handlerButtonGroup() {
+  handlerButtonGroup = () => {
     this.setState((prevState) => ({
       elem: 2,
     }));
   }
-  handlerIcon() {
+  handlerIcon = () => {
     this.setState((prevState) => ({
       elem: 3,
     }));
   }
-  handlerImage() {
+  handlerImage = () =>{
     this.setState((prevState) => ({
       elem: 4,
     }));
   }
-  handlerChip() {
+  handlerChip = () => {
     this.setState((prevState) => ({
       elem: 5,
     }));
   }
-    handlerBadge() {
+    handlerBadge = () => {
     this.setState((prevState) => ({
       elem: 6,
     }));
   }
-  handlerListGroup() {
+  handlerListGroup = () => {
     this.setState((prevState) => ({
       elem: 7,
     }));
   }
-  handlerInput() {
+  handlerInput = () => {
     this.setState((prevState) => ({
       elem: 8,
     }));
   }
-  handlerTabBar(){
+  handlerTabBar = () =>{
     this.setState((prevState) => ({
       elem: 9,
     }));
   }
-  handlerToolTip(){
+  handlerToolTip = () => {
     this.setState((prevState) => ({
       elem: 10,
     }));
   }
-  handlerModal(){
+  handlerModal = () =>{
     this.setState((prevState) => ({
       elem: 11,
     }));

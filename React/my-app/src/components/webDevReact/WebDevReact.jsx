@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Events from "./components/events";
 
 const MainLayout = styled.div`
   width: 1300px;
@@ -47,88 +48,23 @@ const NavButton = styled.button`
   }
 `;
 export default class WebDevReact extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      elem: 1,
-    };
-    this.handlerComponents = this.handlerComponents.bind(this);
-    // this.handlerButtonGroup = this.handlerButtonGroup.bind(this);
-    // this.handlerIcon = this.handlerIcon.bind(this);
-    // this.handlerImage = this.handlerImage.bind(this);
-    // this.handlerChip = this.handlerChip.bind(this);
-    // this.handlerBadge = this.handlerBadge.bind(this);
-    // this.handlerListGroup = this.handlerListGroup.bind(this);
-    // this.handlerInput = this.handlerInput.bind(this);
-    // this.handlerTabBar = this.handlerTabBar.bind(this);
-    // this.handlerToolTip = this.handlerToolTip.bind(this)
-    // this.handlerModal = this.handlerModal.bind(this)
-  }
+  state = {
+    elem: 1,
+  };
 
-  handlerComponents() {
+  handlerComponents = () => {
     this.setState((prevState) => ({
       elem: 1,
     }));
-    console.log("This state = ");
+    console.log("This state = " + this.state.elem);
   }
-  // handlerButtonGroup() {
-  //   this.setState((prevState) => ({
-  //     elem: 2,
-  //   }));
-  // }
-  // handlerIcon() {
-  //   this.setState((prevState) => ({
-  //     elem: 3,
-  //   }));
-  // }
-  // handlerImage() {
-  //   this.setState((prevState) => ({
-  //     elem: 4,
-  //   }));
-  // }
-  // handlerChip() {
-  //   this.setState((prevState) => ({
-  //     elem: 5,
-  //   }));
-  // }
-  //   handlerBadge() {
-  //   this.setState((prevState) => ({
-  //     elem: 6,
-  //   }));
-  // }
-  // handlerListGroup() {
-  //   this.setState((prevState) => ({
-  //     elem: 7,
-  //   }));
-  // }
-  // handlerInput() {
-  //   this.setState((prevState) => ({
-  //     elem: 8,
-  //   }));
-  // }
-  // handlerTabBar(){
-  //   this.setState((prevState) => ({
-  //     elem: 9,
-  //   }));
-  // }
-  // handlerToolTip(){
-  //   this.setState((prevState) => ({
-  //     elem: 10,
-  //   }));
-  // }
-  // handlerModal(){
-  //   this.setState((prevState) => ({
-  //     elem: 11,
-  //   }));
-  // }
-
-
   renderComponent() {
     switch (this.state.elem) {
       case 1:
         return (
           <ContentItem>
-            <h2>Components</h2>
+            <h2>Events</h2>
+            <Events/>
           </ContentItem>
         );
       default:
@@ -148,7 +84,7 @@ export default class WebDevReact extends React.Component {
               alt="logo"
             />
           </NavigatorLogo>
-          <NavButton onClick={this.handlerComponents}>Components</NavButton>
+          <NavButton onClick={this.handlerComponents}>Events</NavButton>
         </NavigatorWrap>
 
         <ContentWrap>
