@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Events from "./components/events";
+import FormWevDev from "./components/formWebDev";
 
 const MainLayout = styled.div`
   width: 1300px;
@@ -58,6 +59,12 @@ class WebDevReact extends React.Component {
     }));
     console.log("This state = " + this.state.elem);
   }
+  handlerFragments = () => {
+    this.setState((prevState) => ({
+      elem: 2,
+    }));
+    console.log("This state = " + this.state.elem);
+  }
   renderComponent() {
     switch (this.state.elem) {
       case 1:
@@ -67,6 +74,13 @@ class WebDevReact extends React.Component {
             <Events/>
           </ContentItem>
         );
+        case 2:
+          return (
+            <ContentItem>
+              <h2>Fragments</h2>
+              <FormWevDev/>
+            </ContentItem>
+          );
       default:
         return null;
     }
@@ -85,6 +99,7 @@ class WebDevReact extends React.Component {
             />
           </NavigatorLogo>
           <NavButton onClick={this.handlerComponents}>Events</NavButton>
+          <NavButton onClick={this.handlerFragments}>Fragments</NavButton>
         </NavigatorWrap>
 
         <ContentWrap>

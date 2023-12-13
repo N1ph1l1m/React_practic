@@ -2,6 +2,9 @@ import React from "react";
 //import styled from "styled-components";
 import PropTypes from "prop-types";
 
+
+
+/// Components, events, conditional render,keys &lists
 const MyLink = ({ text, onClick }) => (
   <a href="/devComponents" onClick={onClick}>
     {text}
