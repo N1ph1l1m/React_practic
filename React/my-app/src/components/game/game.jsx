@@ -12,7 +12,7 @@ display:flex;
 justify-content:center;
 `;
  
-export default class Game extends React.Component {
+class Game extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -110,4 +110,4 @@ export default class Game extends React.Component {
     return null;
   }
   
-  
+export default Game;

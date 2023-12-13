@@ -39,20 +39,15 @@ function Dialog(props){
     )
 }
 
-export default class Composition extends React.Component{
-    constructor(props){
-        super(props);
-        this.state = {
+class Composition extends React.Component{
+  state = {
             login:'',
         }
-        this.handleChangeItem2 = this.handleChangeItem2.bind(this);
-        this.handleItem2SignUp = this.handleItem2SignUp.bind(this);
-    }
-
-    handleChangeItem2(e){
+        
+    handleChangeItem2 = (e) =>{
         this.setState({login: e.target.value});
     }
-    handleItem2SignUp(){
+    handleItem2SignUp = () => {
         alert(`Welcome to Web Site , ${this.state.login}!`);
     }
 
@@ -74,3 +69,4 @@ export default class Composition extends React.Component{
         );
     }
 }
+export default Composition;

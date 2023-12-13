@@ -21,8 +21,7 @@ const ToggleOff = styled.div`
   border-radius: 50px;
 `;
 
-
-export default class App extends React.Component {
+class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -31,7 +30,6 @@ export default class App extends React.Component {
       showLi: false,
       showForm: false,
     };
-    // this.state = {isToggleOn:true};
     this.handleClick = this.handleClick.bind(this);
   }
 
@@ -60,7 +58,6 @@ export default class App extends React.Component {
       return <ToggleOff />;
     }
   };
-
     render() {
     const togleBG = this.togleBG();
     
@@ -85,3 +82,4 @@ export default class App extends React.Component {
     );
   }
 }
+export default App;

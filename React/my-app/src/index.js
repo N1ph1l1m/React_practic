@@ -6,15 +6,15 @@ import {
   } from "react-router-dom";
 import './index.css';
 import ErrorPage from './components/Router/errorPage';
-import FormsComponent from './components/FormsComponent';
+import FormsComponent from './components/FormsComponent/formsComponent';
 import App from './components/app/app';
 import Root from './components/Router/root';
-import Calculator from './components/Calculator';
-import Composition from './components/Composition';
-import Game from './components/game';
+import Calculator from './components/Calculator/calculator';
+import Composition from './components/Composition/composition';
+import Game from './components/game/game';
 import SecondComponent from './components/SecondComponent/secondComponent';
-import DevComponetns from './components/webDevComponents';
-import WebDevReact from './components/webDevReact';
+import DevComponetns from './components/webDevComponents/webDevComponents';
+import WebDevReact from './components/webDevReact/WebDevReact';
 
 
 const router  = createBrowserRouter([

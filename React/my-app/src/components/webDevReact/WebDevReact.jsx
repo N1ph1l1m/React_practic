@@ -47,7 +47,7 @@ const NavButton = styled.button`
     border-color: #ebebeb;
   }
 `;
-export default class WebDevReact extends React.Component {
+class WebDevReact extends React.Component {
   state = {
     elem: 1,
   };
@@ -94,3 +94,4 @@ export default class WebDevReact extends React.Component {
     );
   }
 }
+export default  WebDevReact;

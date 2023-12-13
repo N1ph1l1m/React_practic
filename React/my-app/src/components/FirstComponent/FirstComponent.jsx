@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Button, Container, Row, Col } from "reactstrap";
 
-export default class FirstComponent extends Component {
+class FirstComponent extends Component {
   constructor(props) {
     super(props);
 
@@ -77,3 +77,4 @@ export default class FirstComponent extends Component {
     );
   }
 }
+export default FirstComponent;

@@ -56,7 +56,7 @@ const NavButton = styled.button`
     border-color: #ebebeb;
   }
 `;
-export default class DevComponetns extends React.Component {
+ class DevComponetns extends React.Component {
   // constructor(props) {
   //   super(props);
   
@@ -251,3 +251,4 @@ export default class DevComponetns extends React.Component {
     );
   }
 }
+export default DevComponetns;

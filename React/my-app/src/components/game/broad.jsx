@@ -2,7 +2,7 @@ import React from "react";
 import Square from "./square";
 import "./style.css";
 
-export default class Board extends React.Component {
+ class Board extends React.Component {
 
 
   renderSquare(i) {
@@ -36,4 +36,4 @@ export default class Board extends React.Component {
     );
   }
 }
-
+export default Board;
