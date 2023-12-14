@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Events from "./components/events";
 import FormWevDev from "./components/formWebDev";
 import Portal from "./components/portal";
+import LessonContext from "./components/context";
 
 const MainLayout = styled.div`
   width: 1300px;
@@ -73,6 +74,12 @@ class WebDevReact extends React.Component {
     }));
     console.log("This state = " + this.state.elem);
   }
+  handlerContext = () => {
+    this.setState((prevState) => ({
+      elem: 4,
+    }));
+    console.log("This state = " + this.state.elem);
+  }
   renderComponent() {
     switch (this.state.elem) {
       case 1:
@@ -92,10 +99,17 @@ class WebDevReact extends React.Component {
           case 3:
             return (
               <ContentItem>
-                <h2>HOC</h2>
+                <h2>Portal</h2>
                 <Portal/>
               </ContentItem>
             );
+            case 4:
+              return (
+                <ContentItem>
+                  <h2>Context</h2>
+                  <LessonContext/>
+                </ContentItem>
+              );
           
       default:
         return null;
@@ -117,6 +131,7 @@ class WebDevReact extends React.Component {
           <NavButton onClick={this.handlerComponents}>Events</NavButton>
           <NavButton onClick={this.handlerFragments}>Fragments</NavButton>
           <NavButton onClick={this.handlerHoc}>Portal</NavButton>
+          <NavButton onClick={this.handlerContext}>Context</NavButton>
         </NavigatorWrap>
 
         <ContentWrap>
