@@ -4,6 +4,7 @@ import Events from "./components/events";
 import FormWevDev from "./components/formWebDev";
 import Portal from "./components/portal";
 import LessonContext from "./components/context";
+import News from "./components/api/containers/news/news";
 
 const MainLayout = styled.div`
   width: 1300px;
@@ -80,6 +81,13 @@ class WebDevReact extends React.Component {
     }));
     console.log("This state = " + this.state.elem);
   }
+
+  handlerNews = () => {
+    this.setState((prevState) => ({
+      elem: 5,
+    }));
+    console.log("This state = " + this.state.elem);
+  }
   renderComponent() {
     switch (this.state.elem) {
       case 1:
@@ -110,6 +118,13 @@ class WebDevReact extends React.Component {
                   <LessonContext/>
                 </ContentItem>
               );
+              case 5:
+                return (
+                  <ContentItem>
+                    <h2>News</h2>
+                    <News/>
+                  </ContentItem>
+                );
           
       default:
         return null;
@@ -132,6 +147,7 @@ class WebDevReact extends React.Component {
           <NavButton onClick={this.handlerFragments}>Fragments</NavButton>
           <NavButton onClick={this.handlerHoc}>Portal</NavButton>
           <NavButton onClick={this.handlerContext}>Context</NavButton>
+          <NavButton onClick={this.handlerNews}>News</NavButton>
         </NavigatorWrap>
 
         <ContentWrap>
