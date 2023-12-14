@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Events from "./components/events";
 import FormWevDev from "./components/formWebDev";
-import Hocs from "./components/hoc";
+import Portal from "./components/portal";
 
 const MainLayout = styled.div`
   width: 1300px;
@@ -93,7 +93,7 @@ class WebDevReact extends React.Component {
             return (
               <ContentItem>
                 <h2>HOC</h2>
-                <Hocs/>
+                <Portal/>
               </ContentItem>
             );
           
@@ -116,7 +116,7 @@ class WebDevReact extends React.Component {
           </NavigatorLogo>
           <NavButton onClick={this.handlerComponents}>Events</NavButton>
           <NavButton onClick={this.handlerFragments}>Fragments</NavButton>
-          <NavButton onClick={this.handlerHoc}>HOC</NavButton>
+          <NavButton onClick={this.handlerHoc}>Portal</NavButton>
         </NavigatorWrap>
 
         <ContentWrap>
