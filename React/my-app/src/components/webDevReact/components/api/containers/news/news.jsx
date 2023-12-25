@@ -41,23 +41,25 @@ class News extends Component{
     }
 
     componentDidMount(){
-        const {searchQuery, histPerPage,page} = this.state;
-        this.fetchData(searchQuery,histPerPage, page);
+        const {searchQuery, hitsPerPage, page} = this.state;
+        this.fetchData(searchQuery,hitsPerPage, page);
     }
 
     
-    fetchData = (searchQuery,hitsPerPage , page) => {
-        fetch(`${BASE_PATH}${SEARCH_PATH}?${SEARCH_PARAM}${searchQuery}&${PAGE_HITS}${hitsPerPage}&${PAGE_PARAM}${page}`)
+
+    fetchData = (searchQuery, hitsPerPage, page) => {
+      fetch(`${BASE_PATH}${SEARCH_PATH}?${SEARCH_PARAM}${searchQuery}&${PAGE_HITS}${hitsPerPage}&${PAGE_PARAM}${page}`)
         .then(res => res.json())
         .then(result => this.setNews(result))
         .catch(error => error);
     }
 
-    handleInputChange = ({target:{ value } })=>{
+    handleInputChange = ({ target: { value } })=>{
         this.setState({
             searchQuery:value
         })
     }
+    
     getSearch = ({ key }) => {
         if(key === 'Enter'){
             const { searchQuery , hitsPerPage} = this.state;
@@ -73,7 +75,7 @@ class News extends Component{
       }
 
 
-    handleHitsChange = ( {target:{ value } }) => {
+    handleHitsChange = ( { target: { value } }) => {
         const { searchQuery } = this.state;
         
         this.setState({
@@ -107,11 +109,11 @@ class News extends Component{
       }
     
     updatePage = (number) =>{
-        const {searchQuery, histPerPage} = this.state;
+        const { searchQuery, hitsPerPage } = this.state;
         this.setState({
-            page:number,
-        },()=>{
-            this.fetchData(searchQuery,histPerPage,number)
+            page: number,
+        },() => {
+            this.fetchData(searchQuery,hitsPerPage,number);
         })
     }
 
@@ -130,7 +132,6 @@ class News extends Component{
                 page={page}
                 lastPage={nbPages}
             />
-       
             <Input onKeyPress={this.getSearch} onChange={this.handleInputChange} value={searchQuery}/>
             <ul className='newsList'>
                 {hits.map(({author, created_at, num_comments, objectID, title,points,url})=>
@@ -140,7 +141,7 @@ class News extends Component{
                         created_at = {created_at}
                         num_comments = {num_comments}
                         title = {title}
-                        points={points}
+                        points= {points}
                         url = {url}
                     />
                 )}
